@@ -20,6 +20,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
+    "eslint": "^5.2.0",
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.21.0",
     "webpack": "^4.16.2",
@@ -29,6 +30,9 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-chrome-redux": "^2.0.0-alpha.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0"
   }
 }

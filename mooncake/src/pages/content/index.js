@@ -1,16 +1,25 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import {render} from 'react-dom';
+import {Provider} from 'react-redux';
+import {Store} from 'react-chrome-redux';
 
-const Index = () => {
-  return <div>Hello React</div>;
-};
+import App from './components/app/App';
+
+const proxyStore = new Store({portName: 'example'});
 
 const anchor = document.createElement('div');
 anchor.id = 'mooncake';
 
 document.body.insertBefore(anchor, document.body.childNodes[0]);
 
-ReactDOM.render(<Index />, document.getElementById('mooncake'));
+proxyStore.ready().then(() => {
+  render(
+    <Provider store={proxyStore}>
+      <App/>
+    </Provider>
+   , document.getElementById('mooncake'));
+});
+
 
 // Star consolo.log /
 console.log('%c Mooncake is here bitches', 'background: #8FFE09; color: white; font-size:40px; display: block;');

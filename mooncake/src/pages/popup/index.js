@@ -1,13 +1,21 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import {render} from 'react-dom';
 
-const Index = () => {
-  return <div>Hello React!</div>;
-};
+import App from './components/app/App';
 
-const mountNode = document.createElement('div')
-document.body.appendChild(mountNode)
+import {Store} from 'react-chrome-redux';
+import {Provider} from 'react-redux';
 
-ReactDOM.render(<Index />, mountNode);
+const proxyStore = new Store({
+  portName: 'example'
+});
 
-console.log('ciao');
+proxyStore.ready().then(() => {
+
+  const mountNode = document.createElement('div')
+  document.body.appendChild(mountNode)
+
+  render(
+     <Provider store={proxyStore}><App /></Provider>
+    ,mountNode);
+});
