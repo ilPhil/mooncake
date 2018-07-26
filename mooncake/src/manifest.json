@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "mooncake",
+  "short_name": "comments url",
+  "version": "0.0.0.1",
+  "description":
+    "mooncake allows user to do comments on a webpage based on url",
+  "browser_action": {
+    "default_title": "comments",
+    "default_popup": "pages/popup.html"
+  },
+  "author": "Stefano",
+  "background": {
+    "page": "pages/background.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["pages/index.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "http://*/*",
+    "https://*/*",
+    "storage",
+    "alarms"
+  ],
+  "minimum_chrome_version": "60",
+  "content_security_policy":
+    "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
