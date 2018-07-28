@@ -21,5 +21,5 @@ proxyStore.ready().then(() => {
 });
 
 
-// Star consolo.log /
-console.log('%c Mooncake is here bitches', 'background: #8FFE09; color: white; font-size:40px; display: block;');
+// Start consolo.log /
+console.log('%c Mooncake is here bitches', 'background: lightGreen; color: white; font-size:40px; display: block;');
