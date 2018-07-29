@@ -22,9 +22,10 @@ class App extends Component {
     console.log(this.props);
     return (
       <div className="test" style={{'background':'black','zIndex':'500', 'position':'fixed','bottom':'0','right':'0', 'color':'white !important'}}>
-        <p style={{'color':'#ffffff !important','background':'lightGreen'}}> Url: {this.props.siteData.url} </p>
+        <div style={{'color':'#ffffff !important','background':'lightGreen'}}> Url: {this.props.siteData.url} </div>
         <p style={{'color':'#ffffff !important','background':'lightGreen'}}> Title: {this.props.siteData.title}</p>
         <img style={{'background':'lightGreen'}} src={this.props.siteData.favIconUrl}/>
+        <input class="insertTextcontainer__input" type="text"/>
       </div>
     );
   }
