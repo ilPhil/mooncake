@@ -7,7 +7,6 @@
     "mooncake allows user to do comments on a webpage based on url",
   "browser_action": {
     "default_title": "comments",
-    "default_popup": "pages/popup.html"
   },
   "author": "Stefano",
   "background": {
@@ -17,7 +16,7 @@
     {
       "matches": ["<all_urls>"],
       "js": ["pages/index.js"],
-      "run_at": "document_end"
+      "all_frames": true
     }
   ],
   "permissions": [
@@ -28,7 +27,7 @@
     "storage",
     "alarms"
   ],
-  "web_accessible_resources": ["./img/Mooncake.svg"],
+  "web_accessible_resources": [],
   "icons": {
     "16": "assets/Mooncake.png",
     "48": "assets/Mooncake.png",

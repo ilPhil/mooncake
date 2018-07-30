@@ -29,3 +29,9 @@ chrome.tabs.onUpdated.addListener(() => {
     })
   });
 })
+
+chrome.browserAction.onClicked.addListener(() => {
+  store.dispatch({
+    type: 'OPEN_TOGGLE',
+  })
+});

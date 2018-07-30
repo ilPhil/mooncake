@@ -1,1 +1,237 @@
+/* FONTS */
 
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+/* STYLE */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+ /* body {
+  width: 500px;
+  height: 600px;
+}  */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --main-green: lightGreen;
+  --main-grey: #B0B1B0;
+}
+
+.wrapperMooncake {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 500px;
+  height: 600px;
+  background: white;
+  border-radius: 20px;
+  -webkit-box-shadow: -1px 0px 30px 0px rgba(50,50,50,0.2);
+  -moz-box-shadow: -1px 0px 30px 0px rgba(50,50,50,0.2);
+  box-shadow: -1px 0px 30px 0px rgba(50,50,50,0.2);
+  position: fixed;
+  top: 200px;
+  right: 50px;
+  z-index: 1000;
+}
+
+.toggleDisplay {
+  display: none;
+}
+
+.wrapperMooncake * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.topBar {
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.topBar__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  text-align: center;
+  color: grey;
+  margin-top: 10px;
+}
+
+.topBar__title .image {
+  width: 20px;
+  height: 20px;
+  margin-right:10px;
+}
+
+.topBar__title .title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1.2;
+  font-size: 14px !important;
+  max-width: 350px;
+  color: var(--main-grey) !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.insertTextcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75px;
+  background: white;
+  width: 100%;
+  padding: 0px 20px;
+}
+
+.insertTextcontainer__input {
+  width: 70%;
+  height: 40px !important;
+  font-size: 14px !important;
+  border-top-left-radius:50px !important;
+  border-bottom-left-radius:50px !important;
+  border: 1px solid white !important;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.21);
+  font-family: 'Roboto', sans-serif !important;
+  color: var(--main-grey);
+}
+
+.insertTextcontainer__sendBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 40px;
+  border-top-right-radius:50px;
+  border-bottom-right-radius:50px;
+  border: 1px solid trasparent;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.21);
+  background: var(--main-green);
+  /* background-image: linear-gradient(90deg, #98FB98  0%, white 100%); */
+  cursor: pointer;
+}
+
+.insertTextcontainer__sendBtn:hover {
+  background: white;
+  border: 2px solid #98FB98;
+}
+
+.commentsContainer {
+  width: 100%;
+  padding:0px 30px;
+  height: 525px;
+  overflow: auto;
+  overflow-y: scroll;
+}
+.comment {
+  margin-top: 20px;
+  color: var(--main-grey);
+  width: 100%;
+}
+.comment__details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.imageNameContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageNameContainer__img {
+  width: 50px;
+  height: 50px;
+  background: black;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* .imageNameContainer__img img{
+  width: 50px;
+  height: 50px;
+} */
+
+.imageNameContainer__name {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: var(--main-green);
+  font-size: 14px;
+}
+
+.comment__content {
+  margin-top: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+.comment__reactionsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.reactioins {
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.reactioin {
+  width: 60px;
+  padding: 0px 5px;
+  font-size: 14px;
+  border: 1px solid var(--main-grey);
+  border-radius: 30px;
+  text-align: center;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.reactioin:hover {
+  background: var(--main-green);
+  opacity: 0.8;
+  color: white;
+}
+
+.addReaction {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--main-green);
+  color: var(--main-green);
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.addReaction:hover {
+  background: var(--main-green);
+  color: white;
+}
+
+.reactioin span {
+  margin: 2px;
+}
