@@ -2,10 +2,11 @@ import {createStore, dispatch, applyMiddleware} from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
+import apiClient from './middlewares/api';
 
 import {wrapStore} from 'react-chrome-redux';
 
-const store = createStore(rootReducer, applyMiddleware(logger));
+const store = createStore(rootReducer, applyMiddleware(apiClient, logger));
 
 wrapStore(store, {
   portName: 'example'

@@ -6,7 +6,7 @@
   "description":
     "mooncake allows user to do comments on a webpage based on url",
   "browser_action": {
-    "default_title": "comments",
+    "default_title": "comments"
   },
   "author": "Stefano",
   "background": {
@@ -24,14 +24,13 @@
     "activeTab",
     "http://*/*",
     "https://*/*",
-    "storage",
-    "alarms"
+    "identity"
   ],
   "web_accessible_resources": [],
   "icons": {
-    "16": "assets/Mooncake.png",
-    "48": "assets/Mooncake.png",
-    "128": "assets/Mooncake.png"
+    "16": "assets/mooncake.png",
+    "48": "assets/mooncake.png",
+    "128": "assets/mooncake.png"
   },
   "minimum_chrome_version": "60",
   "content_security_policy":
