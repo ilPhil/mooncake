@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {siteData} from '../actions';
 
 import './app.css';
 import Comment from './Comment';
@@ -16,20 +15,14 @@ class App extends Component {
     if (prevProps.siteData !== this.props.siteData) {
       this.props.getComments(this.props.siteData.url);
     }
+  }
 
-    const sampleObject = {
-      "url":"https%3A%2F%2Fwww.codeworks.me%2F",
-      "comment": "sono il componente",
-      "date": "Tue Jul 31 2018 13:16:07 GMT+0200 (Central European Summer Time)",
-      "postedBy":"5b603acc0b21ceed72f4cd09"
-    }
-
-    this.props.postComments(sampleObject);
+  getComments = () => {
+    const {comments} = this.props;
+    return comments.map(comment =>  <Comment key={comment._id} commentText={comment.comment}/>)
   }
 
   render() {
-    console.log(this.props);
-    console.log(encodeURIComponent(this.props.siteData.url))
 
     const {title, favIconUrl} = this.props.siteData
 
@@ -44,7 +37,7 @@ class App extends Component {
             </div>
           </div>
           <div className="commentsContainer">
-            {this.props.comments.map(comment =>  <Comment commentText={comment.comment}/>)}
+            {this.getComments()}
           </div>
         </div>
         <InputBar/>
@@ -53,36 +46,20 @@ class App extends Component {
   }
 }
 
-
 const mapStateToProps = (state) => ({
   siteData: state.siteData,
   toggleOpen: state.openStatus.flag,
   comments: state.comments,
 });
 
-
-
 const mapDispatchToProps = (dispatch) => ({
-  grabSiteData: (data) => dispatch(siteData(data)),
 
   getComments: (url) => dispatch({
     type: 'GET_COMMENTS',
     api: {
-       endpoint: `/comments/${encodeURIComponent(url)}`,
-      //endpoint: `/comments`,
-      //endpoint: `/comments/`,
-    }
-  }),
-
-  postComments: (data) => dispatch({
-    type: 'POST_COMMENT',
-    api: {
-       endpoint: `/comments`,
-       method: "POST",
-       body: data
+      endpoint: `/comments/${encodeURIComponent(url)}`,
     }
   })
-
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
