@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import moment from 'moment'
 
 class Comment extends Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class Comment extends Component {
             <img className="imageNameContainer__img" src="https://res.cloudinary.com/db46klhlo/image/upload/v1532880194/placeholder.jpg"/>
             <p className="imageNameContainer__name">Leonardo Di Vittorio</p>
           </div>
-          <p className="imageNameContainer__time">4m</p>
+          <p className="imageNameContainer__time">{moment.utc(this.props.date).format("lll")}</p>
         </div>
         <p className="comment__content">{this.props.commentText}</p>
         <div className="comment__reactionsContainer">

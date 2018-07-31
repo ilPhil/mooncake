@@ -9,6 +9,9 @@ import InputBar from './InputBar';
 class App extends Component {
   constructor(props) {
     super(props);
+    this.state  = {
+      render:false
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -19,13 +22,15 @@ class App extends Component {
 
   getComments = () => {
     const {comments} = this.props;
-    return comments.map(comment =>  <Comment key={comment._id} commentText={comment.comment}/>)
+    comments.reverse()
+    return comments.map(comment =>  <Comment key={comment._id} commentText={comment.comment} date={comment.date}/>)
   }
 
+  handlingRender =  () => this.props.getComments(this.props.siteData.url)
+
+
   render() {
-
     const {title, favIconUrl} = this.props.siteData
-
     return (
       <div className = {this.props.toggleOpen ? 'wrapperMooncake' :'toggleDisplay'}>
           <div className ="mooncakeComments">
@@ -40,7 +45,7 @@ class App extends Component {
             {this.getComments()}
           </div>
         </div>
-        <InputBar/>
+        <InputBar handler={this.handlingRender}/>
       </div>
     );
   }
