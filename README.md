@@ -29,3 +29,13 @@ you and other people to make comments based on a url.
 * [Express](https://expressjs.com/it/) - Web framework for node JS
 * [react-chrome-redux](https://github.com/tshaddix/react-chrome-redux) - A set of utilities for building Redux applications in Google Chrome extensions
 * [Google api](https://developer.chrome.com/apps/api_index) 
+
+## Contributing
+Imporovements are welcome !
+
+Fork the repo do whatever you want. Push to your fork and submit a pull request
+## Author
+Stefano Russo - [Linkedin](https://www.linkedin.com/in/stefano-russo-482100124)
+
+## License
+This project is licensed under the MIT License.
