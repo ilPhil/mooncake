@@ -21,3 +21,7 @@ And then put the build folder inside chrome extension page.
  <img src="https://res.cloudinary.com/db46klhlo/image/upload/v1535373607/app.png" width="500">
 
 ## Stack
+* React
+* Express
+* react-chrome-redux
+* Google api
