@@ -4,15 +4,19 @@
 Mooncake is a chrome extension which allows
 you and other people to make comments based on a url.
 
-## To run the back-end
+## Getting started
+
+1. Clone the repo
+
+2. Start server inside the server folder
 
 `npm i` and `npm run dev` 
 
-## To run the front-end
+3. Start the front-end
 
 `npm i` and `npm run dev`
 
-And then put the build folder inside chrome extension page.
+4. put the build folder inside chrome extension page
  
 <img src="https://res.cloudinary.com/db46klhlo/image/upload/v1535380393/Group_6.png">
 
@@ -21,7 +25,7 @@ And then put the build folder inside chrome extension page.
  <img src="https://res.cloudinary.com/db46klhlo/image/upload/v1535373607/app.png" width="500">
 
 ## Stack
-* React
-* Express
-* react-chrome-redux
-* Google api
+* [React](https://reactjs.org/) - Front end library for building user interfaces
+* [Express](https://expressjs.com/it/) - Web framework for node JS
+* [react-chrome-redux](https://github.com/tshaddix/react-chrome-redux) - A set of utilities for building Redux applications in Google Chrome extensions
+* [Google api](https://developer.chrome.com/apps/api_index) 
