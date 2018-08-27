@@ -8,6 +8,4 @@ you and other people to make comments based on a url.
 
 `npm run dev` 
 
-##
-
  <img src="https://res.cloudinary.com/db46klhlo/image/upload/v1535373607/app.png" width="500">
