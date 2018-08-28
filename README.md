@@ -1,28 +1,19 @@
 # <img src="https://res.cloudinary.com/db46klhlo/image/upload/v1532880193/Mooncake.svg" width="300">
 
 
-Mooncake is a chrome extension which allows
-you and other people to make comments based on a url.
+Mooncake is a social Chrome extension which allows users to write and share comments on webpages.
+
+ <img src="https://res.cloudinary.com/db46klhlo/image/upload/v1535373607/app.png" width="500">
 
 ## Getting started
 
-1. Clone the repo
-
-2. Start server inside the server folder
-
-`npm i` and `npm run dev` 
-
-3. Start the front-end
-
-`npm i` and `npm run dev`
-
-4. put the build folder inside chrome extension page
+1. To install dependencies run `npm i` from the client and server folder
+2. To start the server execute `npm run dev` from the server folder
+3. To start the client execute `npm run dev` from the client folder
+4. In Chorme add the extensions in the extension page.
  
 <img src="https://res.cloudinary.com/db46klhlo/image/upload/v1535380393/Group_6.png">
 
-##
-
- <img src="https://res.cloudinary.com/db46klhlo/image/upload/v1535373607/app.png" width="500">
 
 ## Stack
 * [React](https://reactjs.org/) - Front end library for building user interfaces
