@@ -3,7 +3,7 @@
 
 Mooncake is a social Chrome extension which allows users to write and share comments on webpages.
 
- <img src="https://res.cloudinary.com/db46klhlo/image/upload/v1535373607/app.png" width="500">
+ <img src="https://res.cloudinary.com/db46klhlo/image/upload/v1535373607/app.png" width="350" style={display:flex; justify-content:center}>
 
 ## Getting started
 
